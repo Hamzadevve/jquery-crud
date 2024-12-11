@@ -1,11 +1,11 @@
 $(document).ready(function () {
-    const apiUrl = "https://jsonplaceholder.typicode.com/posts"; // Replace with your API endpoint
+    const apiUrl = "https://jsonplaceholder.typicode.com/posts"; 
 
     // Fetch items on load
     function fetchItems() {
         $.get(apiUrl, function (data) {
             $("#item-list").empty();
-            // If using a mock API like JSONPlaceholder, adjust to use relevant fields (e.g., title instead of name)
+            
             data.slice(0, 10).forEach(item => { // Limiting to 10 items for display
                 $("#item-list").append(
                     `<li data-id="${item.id}">
